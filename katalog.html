@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAGA e-Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo">
+        <img src="image/Noemia-Logo1_1.png" alt="logo perpustakaan">
+       <span>SAGA <span>e-Library</span></div> <!--dipakai untuk mengatur teks "SAGA" dan "e-Library"-->
+    <nav>
+      <ul>
+        <li><a href="index6.html">Beranda</a></li>
+        <li><a href="katalog.html" class="active">Katalog</a></li>
+        <li><a href="#">Layanan</a></li>
+        <li><a href="#">Informasi</a></li>
+        <li><a href="#">Profil</a></li>     
+      </ul>
+    </nav>
+
+       <div class="account">
+      <button class="login-btn" onclick="bukaPopup()">Login</button>
+      <input type="text" placeholder="Search...">
+    </div>
+  </header>
+  
+   <section class="hero">
+    <div class="hero-text">
+      <h1>Katalog Digital UIN Salatiga</h1>
+      <p>Temukan ribuan koleksi e-book, jurnal, dan repository akademik dari seluruh sivitas akademika UIN Salatiga.</p>
+    </div>
+  </section>
+
+  <main class="catalog-section">
+    <h2>Koleksi Terbaru</h2>
+    <div class="catalog-grid">
+      <div class="book-card">
+        <img src="image/katalog1.jpg" alt="Cover Buku">
+        <h3>Manajemen Pendidikan Islam</h3>
+        <p>Penulis: Dr. Ahmad Yusuf</p>
+        <button>Lihat Detail</button>
+      </div>
+      <div class="book-card">
+        <img src="image/katalog2.jpg" alt="Cover Buku">
+        <h3>Teknologi Informasi dan Literasi Digital</h3>
+        <p>Penulis: Siti Rahmawati, M.Kom</p>
+        <button>Lihat Detail</button>
+      </div>
+      <div class="book-card">
+        <img src="image/katalog3.png" alt="Cover Buku">
+        <h3>Filsafat Dunia Modern (1850-1970)</h3>
+        <p>Penulis: Prof. Budi Santoso</p>
+        <button>Lihat Detail</button>
+      </div>
+      <div class="book-card">
+        <img src="image/katalog4.jpg" alt="Cover Buku">
+        <h3>Pengantar Metodologi Penelitian</h3>
+        <p>Penulis: Laila Nuraini, M.Pd</p>
+        <button>Lihat Detail</button>
+      </div>
+      <div class="book-card">
+        <img src="image/katalog5.jpg" alt="Cover Buku">
+        <h3>Metodologi Penelitian Kuantitatif</h3>
+        <p>Penulis: Laila Nuraini, M.Pd</p>
+        <button>Lihat Detail</button>
+      </div>
+    </div>
+  </main>
+
+<!--  halaman popup login : fungsi utamanya adalah agar elemen itu bisa dikenali dan dikontrol oleh JavaScript atau CSS. -->
+<div id="popupLogin" class="popup">
+  <div class="popup-content">
+    <button class="close-btn" onclick="tutupPopup()">X</button>
+    <h3>Form Login</h3>
+    <form>
+      <input type="text" placeholder="Username" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <button type="submit" class="login-submit">Login</button>
+    </form>
+    <p>Belum punya akun? <a href="#">Daftar</a></p>
+  </div>
+</div>
+
+<script>
+    function bukaPopup() {
+      document.getElementById("popupLogin").style.display = "block";
+    }
+
+    function tutupPopup() {
+      document.getElementById("popupLogin").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const popup = document.getElementById("popupLogin");
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script> 
+
+
+
+  
+
+  <!-- Footer -->
+ <footer class="footer">
+   <div class="footer-ornament"></div>
+
+  <div class="footer-container">
+
+    <!-- Kolom 1: Logo -->
+    <div class="footer-column footer-logo-section">
+      <img src="logo-uinsalatiga.png" alt="Logo UIN Salatiga" class="footer-logo">
+      <h2>UNIVERSITAS ISLAM NEGERI<br>SALATIGA</h2>
+    </div>
+
+    <!-- Kolom 2: Alamat Kampus -->
+    <div class="footer-column footer-campus">
+      <div class="campus-section">
+        <h3>Kampus Terpadu</h3>
+        <div class="line"></div>
+        <p>🏛 Rektorat | Fakultas Tarbiyah & Ilmu Keguruan | Fakultas Dakwah | Fakultas Ekonomi & Bisnis Islam</p>
+        <p>📍 Jalan Lingkar Salatiga Km. 2, Pulutan, Sidorejo, Kota Salatiga, Jawa Tengah, Indonesia</p>
+        <p>☎️ (0298) 323706 - Fax. (0298) 323433</p>
+        <p>✉️ administrasi@uinsalatiga.ac.id</p>
+      </div>
+
+      <div class="campus-section">
+        <h3>Kampus #1</h3>
+        <div class="line"></div>
+        <p>🏛 Program Pascasarjana</p>
+        <p>📍 Jl. Tentara Pelajar No.2 Kota Salatiga, Jawa Tengah 50721</p>
+      </div>
+
+      <div class="campus-section">
+        <h3>Kampus #2</h3>
+        <div class="line"></div>
+        <p>🏛 Fakultas Syariah | Fakultas Ushuluddin, Adab & Humaniora</p>
+        <p>📍 Jl. Nakula Sadewa V No.9 Kota Salatiga, Jawa Tengah 50722</p>
+      </div>
+    </div>
+
+    <!-- Kolom 3: Follow Us -->
+    <div class="footer-column footer-follow">
+      <h3>Follow Us</h3>
+      <div class="line"></div>
+      <ul>
+        <li>▶️ Youtube</li>
+        <li>📘 Facebook</li>
+        <li>🐦 Twitter</li>
+        <li>📸 Instagram</li>
+        <li>🎵 TikTok</li>
+      </ul>
+      <p class="tagline"><em>Green Wasathiyah Campus</em></p>
+      <h2>#UINSAGA</h2>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>
